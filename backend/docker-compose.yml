@@ -1,0 +1,15 @@
+version: "3"
+
+services: 
+    mongodb:
+        image: 'mongo'
+        container_name: 'mongodb'
+        environment: 
+            MONGO_INITDB_DATABASE: graphqltraining
+        ports: 
+            - 27017:27017
+        volumes: 
+            - mongodb_data:/data/db
+
+volumes: 
+    mongodb_data:
